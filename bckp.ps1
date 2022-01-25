@@ -29,7 +29,7 @@ function Backup-Data {
 
         $CurrentLocation = Get-Location
 
-        $Timestamp = Get-Date -Format "yyyyMMddThhmmss"
+        $Timestamp = Get-Date -AsUTC -Format "yyyyMMddTHHmmssZ"
         $Archive = $Configuration.Archive
 
         $ArchiveName = "$Archive\$Key\$Timestamp.7z"
